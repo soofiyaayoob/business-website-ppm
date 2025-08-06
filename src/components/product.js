@@ -25,8 +25,7 @@ function Products() {
       <div className="grid lg:grid-cols-2 gap-12 items-center">
         <div className="relative ">
           <Image
-            src="/
-            Product.svg"
+            src="/Product.svg"
             width={10}
             height={480}
             alt="Premium A4 Copy Paper Stack"
