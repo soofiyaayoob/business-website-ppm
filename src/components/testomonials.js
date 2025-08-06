@@ -26,19 +26,71 @@ function Testimonials() {
       author: "Mohammed Ali",
       position: "Al Noor Traders",
     },
+      {
+      id: 5,
+      rating: 5,
+      text: "Top-notch quality and service. They always deliver as promised.",
+      author: "Aisha Khan",
+      position: "Print & Co.",
+    },
   ];
 
   const [currentTestimonial, setCurrentTestimonial] = useState(0);
 
-  const nextTestimonial = () => {
-    setCurrentTestimonial((prev) => (prev + 1) % testimonials.length);
-  };
 
-  const prevTestimonial = () => {
-    setCurrentTestimonial(
-      (prev) => (prev - 1 + testimonials.length) % testimonials.length
-    );
-  };
+  const nextTestimonial = () => {
+  const container = document.getElementById("testimonial-scroll");
+  const nextIndex = (currentTestimonial + 1) % testimonials.length;
+
+  if (container) {
+    const cards = container.querySelectorAll(".testimonial-card");
+    const nextCard = cards[nextIndex];
+
+    if (nextCard) {
+      const containerRect = container.getBoundingClientRect();
+      const cardRect = nextCard.getBoundingClientRect();
+
+      // Check if the next card is fully visible in the container
+      const isVisible = cardRect.left >= containerRect.left && cardRect.right <= containerRect.right;
+
+      if (!isVisible) {
+        // Scroll to the next card
+        container.scrollBy({ left: nextCard.offsetWidth, behavior: "smooth" });
+      }
+    }
+  }
+
+  setCurrentTestimonial(nextIndex);
+};
+
+
+
+const prevTestimonial = () => {
+  const container = document.getElementById("testimonial-scroll");
+  const prevIndex = (currentTestimonial - 1 + testimonials.length) % testimonials.length;
+
+  if (container) {
+    const cards = container.querySelectorAll(".testimonial-card");
+    const prevCard = cards[prevIndex];
+
+    if (prevCard) {
+      const containerRect = container.getBoundingClientRect();
+      const cardRect = prevCard.getBoundingClientRect();
+
+      // Check if previous card is fully visible
+      const isVisible = cardRect.left >= containerRect.left && cardRect.right <= containerRect.right;
+
+      if (!isVisible) {
+        container.scrollBy({ left: -prevCard.offsetWidth, behavior: "smooth" });
+      }
+    }
+  }
+
+  setCurrentTestimonial(prevIndex);
+};
+
+
+
 
   const StarRating = ({ rating }) => {
     return (
@@ -68,8 +120,8 @@ function Testimonials() {
 };
 
   return (
-    <section className="con-custom py-16 inline-grid gap-8" aria-label="Testimonials and 5 Star Reviews"id="testimonials">
-      <div className=" sm:max-w-[45%] max-w-[100%] inline-grid gap-5">
+    <section className="con-custom py-16 inline-grid gap-8 max-w-full relative box-border" aria-label="Testimonials and 5 Star Reviews"id="testimonials">
+      <div className=" sm:max-w-[55%] max-w-[100%] inline-grid gap-5">
         <p className="tag">Testimonial</p>
         <h2 className="tag-head">
           Customer Voices That
@@ -82,15 +134,21 @@ function Testimonials() {
         </p>
       </div>
 
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-        {testimonials.map((testimonial, index) => (
-          <div
-            key={testimonial.id}
-            className={`bg-white rounded-lg p-6 shadow-lg transition-all duration-300 ${
-              index === currentTestimonial ? "ring-2 ring-[#0A5275] scale-105" : ""
-            }`}
-          >
-            <div className="flex flex-col gap-3">
+   
+
+  <div className=" relative  max-w-full overflow-hidden">
+  <div
+    id="testimonial-scroll"
+    className="flex overflow-x-auto hide-scrollbar gap-8 scroll-smooth px-3 sm:px-4 py-2 w-full"
+  >
+    {testimonials.map((testimonial, index) => (
+      <div
+        key={testimonial.id}
+        className={`bg-white testimonial-card bg-white min-w-[300px] sm:min-w-[360px] rounded-lg p-2 md:p-6 shadow-lg transition-all duration-300 ${
+          index === currentTestimonial ? "border-2 border-[#0A5275] scale-105" : ""
+        }`}
+      >
+             <div className="flex flex-col gap-3">
               <StarRating rating={testimonial.rating} />
               <p className="text-gray-700 leading-relaxed">
                 "{testimonial.text}"
@@ -109,9 +167,11 @@ function Testimonials() {
                 </div>
               </div>
             </div>
-          </div>
-        ))}
       </div>
+    ))}
+  </div>
+</div>
+
 
       <div className="justify-between flex items-center ">
         {/* Pagination Dots */}

@@ -1,32 +1,64 @@
-import { CircleDollarSign, DollarSignIcon, PackageCheck } from "lucide-react";
-import { FaAward } from "react-icons/fa";
-import { PiPackage } from "react-icons/pi";
+
+import Image from "next/image";
+
 function Benfits() {
   const benefits = [
-    {
-      icon: <FaAward className="w-8 h-8" />,
-      title: "Premium Paper Quality",
-      description:
-        "Ultra-white, 75 GSM based sheets sourced per each high-quality standards from top materials.",
-    },
-    {
-      icon: <PiPackage className="w-8 h-8" />,
-      title: "Bulk Order Expertise",
-      description:
-        "From 1000 to 100,000 units, quick processing to deliver anywhere going to your location efficiently.",
-    },
-    {
-      icon: <CircleDollarSign className="w-8 h-8 " />,
-      title: "Competitive Pricing",
-      description:
-        "Get exclusive rates for big deals, paper saved by locations, orders, and bulk purchasing power.",
-    },
-    {
-      icon: <PackageCheck className="w-8 h-8 " />,
-      title: "Secure Packaging",
-      description:
-        "Each order is in the wrapped and secured for damage prevention and quality preservation.",
-    },
+     {
+    icon: (
+      <Image
+        src="/premium.svg"
+        alt="Premium Paper Quality"
+        width={32}
+        height={32}
+        className="w-8 h-8"
+      />
+    ),
+    title: "Premium Paper Quality",
+    description:
+      "Ultra-white, 75 GSM based sheets sourced per each high-quality standards from top materials.",
+  },
+  {
+    icon: (
+      <Image
+        src="/pacakge.svg"
+        alt="Bulk Order Expertise"
+        width={32}
+        height={32}
+        className="w-8 h-8"
+      />
+    ),
+    title: "Bulk Order Expertise",
+    description:
+      "From 1000 to 100,000 units, quick processing to deliver anywhere going to your location efficiently.",
+  },
+  {
+    icon: (
+      <Image
+        src="/pricing.svg"
+        alt="Competitive Pricing"
+        width={32}
+        height={32}
+        className="w-8 h-8"
+      />
+    ),
+    title: "Competitive Pricing",
+    description:
+      "Get exclusive rates for big deals, paper saved by locations, orders, and bulk purchasing power.",
+  },
+  {
+    icon: (
+      <Image
+        src="/secure.svg"
+        alt="Secure Packaging"
+        width={32}
+        height={32}
+        className="w-8 h-8"
+      />
+    ),
+    title: "Secure Packaging",
+    description:
+      "Each order is in the wrapped and secured for damage prevention and quality preservation.",
+  },
   ];
 
   return (
