@@ -36,7 +36,7 @@ const [isOpen, setIsOpen] = useState(false);
       {/* Logo */}
       <div className="logo-wrapper">
         <Image src="/
-        logo.svg" alt="Logo" width={98} height={58} priority   className="invert brightness-200 sm:invert-0 sm:brightness-100" />
+        Logo.svg" alt="Logo" width={98} height={58} priority   className="invert brightness-200 sm:invert-0 sm:brightness-100" />
       </div>
 
    {/* Navigation Links - Hidden on small screens */}
