@@ -18,7 +18,8 @@ function Footer() {
             <div className="flex items-center mb-4">
              
               <div className="logo-wrapper">
-        <Image src="/logo.svg" alt="Logo" width={98} height={58} priority   className="invert brightness-200 " />
+        <Image src="/
+        Logo.svg" alt="Logo" width={98} height={58} priority   className="invert brightness-200 " />
       </div>
             </div>
             <p className="text-blue-100 text-sm leading-relaxed">
