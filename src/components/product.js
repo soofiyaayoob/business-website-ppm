@@ -26,7 +26,7 @@ function Products() {
         <div className="relative ">
           <Image
             src="/
-            product.svg"
+            Product.svg"
             width={10}
             height={480}
             alt="Premium A4 Copy Paper Stack"
