@@ -7,7 +7,7 @@ export default function Home() {
         <h1 className="text-6xl font-bold break-words">
           Supplying the Paper that Powers Your Business
         </h1>
-        <h3 className="text-xl  mt-2 font-normal break-words letter-spacing-wide tracking-wide ">
+        <h3 className="text-xl  mt-2 font-normal break-words letter-spacing-wide tracking-wide">
           Supplying premium A4 copy paper in bulk to businesses, schools, and distributors with guaranteed quality and timely delivery.
         </h3>
         <div className="submission-box h-[48px] w-[151px] mt-6">

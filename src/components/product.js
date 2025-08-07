@@ -16,20 +16,19 @@ function Products() {
   );
 
   return (
-    <section className="con-custom md:pb-20 pb-10" aria-label="Our Products details" id="product">
+    <section className="con-custom md:pb-20 pb-10 max-h-full" aria-label="Our Products details" id="product">
       <div className="flex flex-col gap-4">
         <p className="tag">Products</p>
         <h2 className="tag-head">What We Offer</h2>
       </div>
 
-      <div className="grid lg:grid-cols-2 gap-12 items-center">
-        <div className="relative ">
+      <div className="grid lg:grid-cols-2 gap-12 items-center max-h-full">
+        <div className="relative h-full">
           <Image
             src="/Product.svg"
-            width={10}
-            height={480}
+          fill
             alt="Premium A4 Copy Paper Stack"
-            className="rounded-3xl shadow-lg h-full w-full h-64 object-cover"
+            className="rounded-3xl shadow-lg w-full  h-auto object-cover"
           />
         </div>
 
@@ -55,7 +54,7 @@ function Products() {
           <div className="space-y-3">
             <h4 className="font-bold  ">Key Specifications:</h4>
 
-            <div className="grid grid-cols-1 gap-1 sm:text-base text-sm text-grey-600">
+            <div className="grid grid-cols-1 sm:gap-1 gap-2 text-base text-grey-600">
               <div className="flex justify-between">
                 <span>Size & Weight:</span>
                 <span>A4 (297 × 210 mm) - 80 GSM</span>
