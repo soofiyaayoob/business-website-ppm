@@ -3,6 +3,11 @@
  */
 export const metadata = {
     metadataBase: new URL('https://ppmgeneraltrading.com'),
+    icons: {
+      icon: '/favicon.ico',
+      apple: '/logo.webp',
+     
+    },
   title: "PPM General Trading - Premium A4 Supplier UAE",
   description: "PPM General Trading - UAE based A4 sheet suppliers offering bulk ordering at affordable price. Trusted by businesses across the region. Supplying high-quality A4 copy paper in bulk to businesses, schools, and distributors with guaranteed quality and timely delivery.",
   keywords: [
