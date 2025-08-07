@@ -1,12 +1,13 @@
 import Image from "next/image";
+import Counter from "./counter";
 
 function About() {
-  const stats = [
-    { value: "2+", label: "Years Industry Experience" },
-    { value: "100K+", label: "Sheets Delivered Monthly" },
-    { value: "100+", label: "Clients Across UAE" },
-    { value: "24", label: "Hrs Response Time" },
-  ];
+const stats = [
+  { value: 2, suffix: "+", label: "Years Industry Experience" },
+  { value: 100000, suffix: "+", label: "Sheets Delivered Monthly" },
+  { value: 100, suffix: "+", label: "Clients Across UAE" },
+  { value: 24, suffix: "", label: "Hrs Response Time" },
+];
 
   return (
     <div className="con-custom md:py-20 py-10 flex flex-col gap-20" aria-label="About Us" id="about">
@@ -33,7 +34,7 @@ function About() {
           </button>
         </div>
 
-        <div className="relative">
+        <div className=" px-8">
           <Image
             src="/about.svg"
             alt="Paper handling process"
@@ -44,16 +45,15 @@ function About() {
         </div>
       </div>
 
-      <div className="grid grid-cols-2 lg:grid-cols-4 gap-8">
-        {stats.map((stat, index) => (
-          <div key={index} className="text-center">
-            <h3 className="text-4xl font-bold text-[#0A5275] mb-2">
-              {stat.value}
-            </h3>
-            <p className="font-normal text-gray-700">{stat.label}</p>
-          </div>
-        ))}
-      </div>
+      
+<div className="grid grid-cols-2 lg:grid-cols-4 gap-8">
+  {stats.map((stat, index) => (
+    <div key={index} className="text-center">
+      <Counter end={stat.value} suffix={stat.suffix} />
+      <p className="font-normal text-gray-700 mt-2">{stat.label}</p>
+    </div>
+  ))}
+</div>
     </div>
   );
 }

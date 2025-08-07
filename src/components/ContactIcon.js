@@ -3,7 +3,7 @@ import { FaWhatsapp } from "react-icons/fa";
 
 export default function ContactIcon() {
   return (
-    <div className="fixed top-[300px] right-4 flex flex-col items-center gap-6 z-50">
+    <div className="fixed top-[300px] right-4 flex flex-col items-center gap-4 z-50">
       <a
         href="https://wa.me/971561312323?text=Hello%20(inquiry%20from%20website),%0AI%20would%20like%20to%20know%20more%20about%20A4%20sheet%20bulk%20ordering."
         target="_blank"

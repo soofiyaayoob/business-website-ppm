@@ -58,7 +58,7 @@ function Faq() {
         </div>
 
         {/* FAQ List */}
-        <div className="space-y-4 max-w-2xl w-full mx-auto px-4">
+        <div className="space-y-4 max-w-3xl w-full mx-auto px-4">
           {faqs.map((faq) => (
             <div
               key={faq.id}
@@ -68,7 +68,7 @@ function Faq() {
                 onClick={() => toggleFAQ(faq.id)}
                 className="w-full px-6 py-4 text-left flex items-start justify-between hover:bg-gray-50 transition-colors duration-200"
               >
-                <span className="font-medium text-gray-900 pr-4 text-base leading-snug text-left">
+                <span className="font-medium text-gray-900 pr-4 text-lg leading-snug text-left">
                   {faq.question}
                 </span>
                 {openFAQ === faq.id ? (
@@ -85,7 +85,7 @@ function Faq() {
                     : "max-h-0 opacity-0 pb-0"
                 }`}
               >
-                <p className="text-gray-600 leading-relaxed break-words text-sm">
+                <p className="font-normal leading-relaxed break-words text-md">
                   {faq.answer}
                 </p>
               </div>

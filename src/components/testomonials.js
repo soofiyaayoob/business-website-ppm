@@ -26,13 +26,13 @@ function Testimonials() {
       author: "Mohammed Ali",
       position: "Al Noor Traders",
     },
-      {
-      id: 5,
-      rating: 5,
-      text: "Top-notch quality and service. They always deliver as promised.",
-      author: "Aisha Khan",
-      position: "Print & Co.",
-    },
+    //   {
+    //   id: 5,
+    //   rating: 5,
+    //   text: "Top-notch quality and service. They always deliver as promised.",
+    //   author: "Aisha Khan",
+    //   position: "Print & Co.",
+    // },
   ];
 
   const [currentTestimonial, setCurrentTestimonial] = useState(0);
@@ -144,7 +144,7 @@ const prevTestimonial = () => {
     {testimonials.map((testimonial, index) => (
       <div
         key={testimonial.id}
-        className={`bg-white testimonial-card bg-white min-w-[300px] sm:min-w-[360px] rounded-lg p-2 md:p-6 shadow-lg transition-all duration-300 ${
+        className={`bg-white testimonial-card bg-white min-w-[300px] sm:min-w-[360px] rounded-lg p-5 md:p-10 shadow-lg transition-all duration-300 ${
           index === currentTestimonial ? "border-2 border-[#0A5275] scale-105" : ""
         }`}
       >

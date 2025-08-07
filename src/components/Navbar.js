@@ -35,12 +35,12 @@ const [isOpen, setIsOpen] = useState(false);
       
       {/* Logo */}
       <div className="logo-wrapper">
-        <Image src="/Logo.svg" alt="Logo" width={98} height={58} priority   className="invert brightness-200 sm:invert-0 sm:brightness-100" />
+        <Image src="/Logo.webp" alt="Logo" width={98} height={58} priority   className="invert brightness-200 sm:invert-0 sm:brightness-100" />
       </div>
 
    {/* Navigation Links - Hidden on small screens */}
-<div className="hidden md:flex gap-4 items-center">
-  <ul className="flex gap-4">
+<div className="hidden md:flex gap-10 items-center">
+  <ul className="flex gap-10">
     <li><a href="#home" className="link">Home</a></li>
     <li><a href="#about" className="link">About</a></li>
     <li><a href="#whychooseus" className="link">Why Choose Us</a></li>

@@ -55,7 +55,7 @@ function Products() {
           <div className="space-y-3">
             <h4 className="font-bold  ">Key Specifications:</h4>
 
-            <div className="grid grid-cols-1 gap-1 sm:text-sm text-xs text-grey-600">
+            <div className="grid grid-cols-1 gap-1 sm:text-base text-sm text-grey-600">
               <div className="flex justify-between">
                 <span>Size & Weight:</span>
                 <span>A4 (297 × 210 mm) - 80 GSM</span>

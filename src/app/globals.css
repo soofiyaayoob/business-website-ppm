@@ -21,7 +21,7 @@ body {
 /* Component classes */
 @layer components {
   .submission-box {
-    @apply rounded-[31px] gap-[80px]  text-white bg-[#0A5275] flex items-center justify-center hover:scale-115 transition-transform ease-in-out;
+    @apply rounded-[31px] gap-[80px]  text-white bg-[#0A5275] flex items-center justify-center hover:scale-105 transition-transform ease-in-out;
   }
 
   .icon-box {
