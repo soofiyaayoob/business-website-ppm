@@ -40,7 +40,7 @@ const [isOpen, setIsOpen] = useState(false);
 
    {/* Navigation Links - Hidden on small screens */}
 <div className="hidden md:flex gap-10 items-center">
-  <ul className="flex gap-1">
+  <ul className="flex gap-10">
     <li><a href="#home" className="link">Home</a></li>
     <li><a href="#about" className="link">About</a></li>
     <li><a href="#whychooseus" className="link">Why Choose Us</a></li>
