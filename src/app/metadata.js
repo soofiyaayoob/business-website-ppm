@@ -1,7 +1,7 @@
 /**
  * @type {import('next').Metadata}
  */
-export const metadata = {
+export const Sitemetadata = {
   metadataBase: new URL("https://www.ppmgeneraltrading.com"),
   icons: {
     icon: "/favicon.ico",
