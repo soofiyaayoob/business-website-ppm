@@ -2,7 +2,7 @@ import { Inter } from 'next/font/google';
 import "./globals.css";
 import ContactIcon from "@components/ContactIcon";
 import { Sitemetadata } from './metadata';
-import { GoogleAnalytics } from 'nextjs-google-analytics';
+import Analytics from '@/components/analytics';
 const inter = Inter({
   subsets: ['latin'],
 });
@@ -17,7 +17,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
         <body className={`${inter.variable} app`} >
-          <GoogleAnalytics trackPageViews gaMeasurementId={process.env.GA_ID}/>
+       <Analytics/>
         <ContactIcon />
         {children}
       </body>
